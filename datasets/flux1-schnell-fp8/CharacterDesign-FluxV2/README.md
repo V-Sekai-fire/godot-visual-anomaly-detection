@@ -3,6 +3,7 @@
 ## Image Tagging Prompt
 
 - `microsoft/Phi-3-vision-128k-instruct`
+- Temperature 0.01
 
 Could you create a character brief for a 3D concept art assignment?
 
