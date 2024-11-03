@@ -1,0 +1,13 @@
+anomalib
+lightning
+opencv-python
+imgaug
+kornia
+pandas
+scikit-learn
+timm
+einops
+FrEIA
+wheel
+python-dotenv
+open-clip-torch
