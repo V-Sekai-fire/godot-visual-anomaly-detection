@@ -4,7 +4,7 @@
 
 - `microsoft/Phi-3-vision-128k-instruct`
 
-Create a character brief for a 3D concept art assignment by defining your character’s identity, including their role, species, and critical traits. Describe their physical attributes, such as age, gender, and unique features. Outline the character’s environment, considering the cultural and historical factors shaping their design and challenges. Finally, explain your character's purpose in the story, highlighting the themes or emotions you want to convey through their appearance and abilities.
+Create a character brief for a 3D concept art assignment.
 
 ### Start caption with
 
