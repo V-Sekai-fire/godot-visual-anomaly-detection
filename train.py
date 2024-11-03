@@ -21,7 +21,7 @@ def train():
     )
     datamodule.setup()
     model = EfficientAd()
-    engine = Engine(max_epochs=5)
+    engine = Engine()
     engine.fit(datamodule=datamodule, model=model)
 
 if __name__ == '__main__':
