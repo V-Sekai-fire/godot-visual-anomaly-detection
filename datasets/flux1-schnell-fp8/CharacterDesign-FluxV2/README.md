@@ -4,7 +4,7 @@
 
 - `microsoft/Phi-3-vision-128k-instruct`
 
-Create a character brief for a 3D concept art assignment.
+Could you create a character brief for a 3D concept art assignment?
 
 ### Start caption with
 
