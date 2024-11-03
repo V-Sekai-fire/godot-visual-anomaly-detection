@@ -1,0 +1,23 @@
+{
+  "prompt": "anime girl,reference sheet,white background,simple background,multiple views, upper body, front, from side, color palette reference,rave girl, dance costume",
+  "negative_prompt": "",
+  "seed": 600454727,
+  "use_stable_diffusion_model": "flux1-schnell-fp8",
+  "clip_skip": false,
+  "use_controlnet_model": null,
+  "control_alpha": null,
+  "use_vae_model": "ae",
+  "sampler_name": "forge_flux_realistic",
+  "scheduler_name": "normal",
+  "width": 1024,
+  "height": 1024,
+  "num_inference_steps": 25,
+  "guidance_scale": 1.0,
+  "distilled_guidance_scale": 3.5,
+  "use_lora_model": "CharacterDesign-FluxV2",
+  "lora_alpha": 0.5,
+  "use_embeddings_model": null,
+  "tiling": null,
+  "use_face_correction": null,
+  "use_upscale": null
+}
