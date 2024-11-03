@@ -1,0 +1,21 @@
+Prompt: The front-back reference sheet from the side has a simple, white background and multiple views of the character's upper body with a colour palette. The image is a digital illustration of a whimsical female magical character in various poses showcasing different viewpoints of her outfit and accessories. A reference sheet is at the bottom.
+Negative Prompt: 
+Seed: 917176476
+Stable Diffusion model: flux1-schnell-fp8
+Clip Skip: True
+ControlNet model: None
+ControlNet Strength: None
+VAE model: ae
+Sampler: forge_flux_realistic
+Scheduler: sgm_uniform
+Width: 1024
+Height: 1024
+Steps: 25
+Guidance Scale: 1.1
+Distilled Guidance: 3.0
+LoRA model: CharacterDesign-FluxV2
+LoRA Strength: 1.0
+Embedding models: None
+Seamless Tiling: None
+Use Face Correction: None
+Use Upscaling: None
