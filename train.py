@@ -4,17 +4,26 @@ from anomalib.models import EfficientAd # EfficientAd has better time and acurra
 
 from anomalib.data import Folder
 from anomalib.data.utils import TestSplitMode
+import torch
+from multiprocessing import freeze_support
 
-datamodule = Folder(
-    name="chibire.com",
-    root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2",
-    normal_dir="good",
-    test_split_mode=TestSplitMode.SYNTHETIC,
-)
 
-datamodule.setup()
+def train():
+    torch.set_float32_matmul_precision('high')
 
-model = EfficientAd()
-engine = Engine(max_epochs=5)
+    datamodule = Folder(
+        name="chibire.com",
+        root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2",
+        normal_dir="normal",
+        test_split_mode=TestSplitMode.SYNTHETIC,
+        image_size=1024,
+        train_batch_size=1,
+    )
+    datamodule.setup()
+    model = EfficientAd()
+    engine = Engine(max_epochs=5)
+    engine.fit(datamodule=datamodule, model=model)
 
-engine.fit(datamodule=datamodule, model=model)
+if __name__ == '__main__':
+    freeze_support()
+    train()
