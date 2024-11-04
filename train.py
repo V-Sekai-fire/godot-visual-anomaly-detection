@@ -1,7 +1,6 @@
 
 from anomalib.engine import Engine
-from anomalib.models import EfficientAd # EfficientAd has better time and acurracy performance than the patchcore default model.
-
+from anomalib.models import Patchcore
 from anomalib.data import Folder
 from anomalib.data.utils import TestSplitMode
 import torch
@@ -17,12 +16,10 @@ def train():
         normal_dir="normal",
         abnormal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
-        image_size=1024,
-        train_batch_size=1,
-        num_workers=0, # 0 for windows slowdown
+        image_size=(1024,1024),
     )
     datamodule.setup()
-    model = EfficientAd()
+    model = Patchcore()
     engine = Engine(max_epochs=50)
     engine.fit(datamodule=datamodule, model=model)
 
