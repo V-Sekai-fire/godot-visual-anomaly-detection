@@ -18,12 +18,12 @@ def interfence():
 
     model = EfficientAd()
 
-    engine = Engine(max_epochs=5)
+    engine = Engine()
 
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/EfficientAd/chibire.com/latest/weights/lightning/model.ckpt",
+        ckpt_path="results/EfficientAd/chibire_com_style/latest/weights/lightning/model.ckpt",
     )
     
     print(predictions)

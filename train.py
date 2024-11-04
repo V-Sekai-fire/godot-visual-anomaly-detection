@@ -11,7 +11,7 @@ def train():
     torch.set_float32_matmul_precision('high')
 
     datamodule = Folder(
-        name="chibire.com",
+        name="chibire_com_style",
         root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2/",
         normal_dir="normal",
         abnormal_dir="abnormal",
