@@ -1,6 +1,6 @@
 
 from anomalib.engine import Engine
-from anomalib.models import Patchcore
+from anomalib.models import EfficientAd
 from anomalib.data import Folder
 from anomalib.data.utils import TestSplitMode
 import torch
@@ -16,10 +16,12 @@ def train():
         normal_dir="normal",
         abnormal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
-        image_size=(1024,1024),
+        image_size=1024,
+        train_batch_size=1,
+        num_workers=0, # 0 for windows slowdown
     )
     datamodule.setup()
-    model = Patchcore()
+    model = EfficientAd()
     engine = Engine(max_epochs=50)
     engine.fit(datamodule=datamodule, model=model)
 
