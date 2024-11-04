@@ -13,15 +13,17 @@ def train():
 
     datamodule = Folder(
         name="chibire.com",
-        root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2",
+        root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2/",
         normal_dir="normal",
+        abnormal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
         image_size=1024,
         train_batch_size=1,
+        num_workers=0, # 0 for windows slowdown
     )
     datamodule.setup()
     model = EfficientAd()
-    engine = Engine()
+    engine = Engine(max_epochs=50)
     engine.fit(datamodule=datamodule, model=model)
 
 if __name__ == '__main__':
