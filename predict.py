@@ -7,12 +7,12 @@ import torch
 from multiprocessing import freeze_support
 
 def interfence():
-    torch.set_float32_matmul_precision('high')
+    torch.set_float32_matmul_precision('medium')
         
     datamodule = Folder(
-        name="chibire.com",
+        name="chibfire.com",
         root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2",
-        normal_dir="test",
+        normal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
     )
 
@@ -23,7 +23,7 @@ def interfence():
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/EfficientAd/chibire_com_style/latest/weights/lightning/model.ckpt",
+        ckpt_path="results/EfficientAd/chibfire_com_style/v2/weights/lightning/model.ckpt",
     )
     
     print(predictions)
