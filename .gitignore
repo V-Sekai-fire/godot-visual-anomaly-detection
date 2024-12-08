@@ -2,3 +2,5 @@ pre_trained
 results
 .tmp
 datasets/imagenette
+
+.DS_Store
