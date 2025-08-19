@@ -1,3 +1,3 @@
 
 predict:
-    python3 predict.py
+    python predict.py

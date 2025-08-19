@@ -11,3 +11,6 @@ FrEIA
 wheel
 python-dotenv
 open-clip-torch
+# anomalib install -v
+# dnf install yum install python3-pyyaml
+# pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126

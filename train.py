@@ -1,6 +1,6 @@
 
 from anomalib.engine import Engine
-from anomalib.models import EfficientAd
+from anomalib.models import Dinomaly
 from anomalib.data import Folder
 from anomalib.data.utils import TestSplitMode
 import torch
@@ -8,7 +8,7 @@ from multiprocessing import freeze_support
 
 
 def train():
-    torch.set_float32_matmul_precision('high')
+    torch.set_float32_matmul_precision('medium')
 
     datamodule = Folder(
         name="chibfire_com_style",
@@ -16,13 +16,12 @@ def train():
         normal_dir="normal",
         abnormal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
-        image_size=1024,
         train_batch_size=1,
-        num_workers=0, # 0 for windows slowdown
+        num_workers=2,
     )
     datamodule.setup()
-    model = EfficientAd()
-    engine = Engine(max_epochs=50)
+    model = Dinomaly()
+    engine = Engine(strategy="ddp", devices=1)
     engine.fit(datamodule=datamodule, model=model)
 
 if __name__ == '__main__':

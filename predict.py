@@ -1,5 +1,5 @@
 
-from anomalib.models import EfficientAd
+from anomalib.models import Dinomaly
 from anomalib.engine import Engine
 from anomalib.data import Folder
 from anomalib.data.utils import TestSplitMode
@@ -16,14 +16,14 @@ def interfence():
         test_split_mode=TestSplitMode.SYNTHETIC,
     )
 
-    model = EfficientAd()
+    model = Dinomaly()
 
     engine = Engine()
 
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/EfficientAd/chibfire_com_style/v2/weights/lightning/model.ckpt",
+        ckpt_path="results/Dinomaly/chibfire_com_style/v2/weights/lightning/model.ckpt",
     )
     
     print(predictions)
