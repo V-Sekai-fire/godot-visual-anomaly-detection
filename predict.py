@@ -15,12 +15,12 @@ def interfence():
         normal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
         train_batch_size=1,
-        num_workers=2,
+        num_workers=1,
     )
 
     model = Dinomaly()
 
-    engine = Engine(strategy="ddp", devices=1)
+    engine = Engine(strategy="ddp", accelerator="gpu", devices="1", precision="bf16-mixed", max_epochs=500)
 
     predictions = engine.predict(
         datamodule=datamodule,
