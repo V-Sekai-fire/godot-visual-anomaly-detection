@@ -12,8 +12,8 @@ def interfence():
     datamodule = Folder(
         name="chibfire.com",
         root="datasets/a-poses",
-        normal_dir="abnormal",
-        test_split_mode=TestSplitMode.SYNTHETIC,
+        normal_dir="normal",
+        normal_test_dir="test",
         train_batch_size=1,
         num_workers=1,
     )
@@ -27,8 +27,7 @@ def interfence():
         model=model,
         ckpt_path="results/Dinomaly/chibfire_com_style/latest/weights/lightning/model.ckpt",
     )
-    
-    print(predictions)
+    print(prediction)
     
 if __name__ == '__main__':
     freeze_support()
