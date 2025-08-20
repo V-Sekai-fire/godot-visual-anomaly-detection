@@ -12,7 +12,7 @@ def train():
 
     datamodule = Folder(
         name="chibfire_com_style",
-        root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2/",
+        root="datasets/t-pose-a-poses",
         normal_dir="normal",
         abnormal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,

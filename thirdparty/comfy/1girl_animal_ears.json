@@ -1,5 +1,5 @@
 {
-  "id": "d2d1faaf-2721-471e-a202-305446a968ee",
+  "id": "0e95eb50-b02b-493d-a341-c099ea15556f",
   "revision": 0,
   "last_node_id": 61,
   "last_link_id": 140,
@@ -332,7 +332,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        1089371866522351,
+        1001449688519808,
         "randomize",
         8,
         1,
@@ -559,7 +559,7 @@
       },
       "widgets_values": [
         "flux1-depth-dev-lora.safetensors",
-        0.7000000000000002,
+        0.6000000000000001,
         1.0000000000000002
       ]
     },
@@ -601,7 +601,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "CHIBIFIRE_COM_STYLE, 1girl, animal ears, brown hair, breasts, blush, bare shoulders, simple background, looking at viewer, dress, detached sleeves, bow, very long hair, long sleeves, dress, bangs, medium breasts, animal ear fluff, closed mouth, cropped legs, virtual youtuber, hair bow, solo, short hair, shorts, full body, smile, collarbone, standing, camisole, white footwear, navel, white background\n"
+        "CHIBIFIRE_COM_STYLE,\ndance/club wear,\n1girl, animal ears, brown hair, breasts, blush, bare shoulders, simple background, looking at viewer, dress, detached sleeves, bow, short hair, long sleeves, dress, bangs, medium breasts, animal ear fluff, closed mouth, cropped legs, virtual youtuber, hair bow, solo, shorts, full body, smile, collarbone, standing, camisole, white footwear, white background, \n"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -763,10 +763,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9516650000000235,
+      "scale": 0.9516650000000267,
       "offset": [
-        216.81888862759547,
-        1011.9427684066995
+        -310.7118150591084,
+        869.0728336393196
       ]
     },
     "frontendVersion": "1.23.4",

@@ -11,19 +11,21 @@ def interfence():
         
     datamodule = Folder(
         name="chibfire.com",
-        root="datasets/flux1-schnell-fp8/CharacterDesign-FluxV2",
+        root="datasets/t-pose-a-poses",
         normal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
+        train_batch_size=1,
+        num_workers=2,
     )
 
     model = Dinomaly()
 
-    engine = Engine()
+    engine = Engine(strategy="ddp", devices=1)
 
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/Dinomaly/chibfire_com_style/v0/weights/lightning/model.ckpt",
+        ckpt_path="results/Dinomaly/chibfire_com_style/latest/weights/lightning/model.ckpt",
     )
     
     print(predictions)
