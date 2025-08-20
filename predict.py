@@ -23,7 +23,7 @@ def interfence():
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/Dinomaly/chibfire_com_style/v2/weights/lightning/model.ckpt",
+        ckpt_path="results/Dinomaly/chibfire_com_style/v0/weights/lightning/model.ckpt",
     )
     
     print(predictions)
