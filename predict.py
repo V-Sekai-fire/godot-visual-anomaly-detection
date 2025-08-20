@@ -1,4 +1,3 @@
-
 from anomalib.models import Dinomaly
 from anomalib.engine import Engine
 from anomalib.data import Folder
@@ -6,9 +5,10 @@ from anomalib.data.utils import TestSplitMode
 import torch
 from multiprocessing import freeze_support
 
+
 def interfence():
-    torch.set_float32_matmul_precision('medium')
-        
+    torch.set_float32_matmul_precision("medium")
+
     datamodule = Folder(
         name="chibfire.com",
         root="datasets/a-poses",
@@ -28,7 +28,8 @@ def interfence():
         ckpt_path="results/Dinomaly/chibfire_com_style/latest/weights/lightning/model.ckpt",
     )
     print(prediction)
-    
-if __name__ == '__main__':
+
+
+if __name__ == "__main__":
     freeze_support()
     interfence()
