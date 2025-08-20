@@ -1,7 +1,7 @@
 
 predict:
-    python predict.py
+    python3 predict.py
 
 train:
-    python train.py 
+    python3 train.py 
     

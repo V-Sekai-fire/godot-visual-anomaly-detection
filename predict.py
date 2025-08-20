@@ -20,7 +20,7 @@ def interfence():
 
     model = Dinomaly()
 
-    engine = Engine(strategy="ddp", accelerator="gpu", devices="1", precision="bf16-mixed", max_epochs=500)
+    engine = Engine(devices="1", precision="bf16-mixed", max_epochs=500)
 
     predictions = engine.predict(
         datamodule=datamodule,
