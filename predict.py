@@ -25,9 +25,9 @@ def interfence():
     predictions = engine.predict(
         datamodule=datamodule,
         model=model,
-        ckpt_path="results/Dinomaly/chibfire_com_style/latest/weights/lightning/model.ckpt",
+        ckpt_path="checkpoints/best_model.ckpt",
     )
-    print(prediction)
+    print(predictions)
 
 
 if __name__ == "__main__":

@@ -26,7 +26,7 @@ def train():
 
     early_stopping = EarlyStopping(
         monitor="train_loss_epoch",
-        patience=20,
+        patience=10,
         mode="min",  # Set to 'min' to stop when the loss stops decreasing
     )
 
