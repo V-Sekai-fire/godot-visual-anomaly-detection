@@ -11,7 +11,7 @@ def interfence():
         
     datamodule = Folder(
         name="chibfire.com",
-        root="datasets/t-pose-a-poses",
+        root="datasets/a-poses",
         normal_dir="abnormal",
         test_split_mode=TestSplitMode.SYNTHETIC,
         train_batch_size=1,
