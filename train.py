@@ -17,7 +17,7 @@ def train():
         train_batch_size=64,
         eval_batch_size=64,
         num_workers=1,
-        test_split_mode=TestSplitMode.FROM_DIR,
+        test_split_mode=TestSplitMode.SYNTHETIC,
         val_split_ratio=0.2,
     )
     datamodule.setup()
