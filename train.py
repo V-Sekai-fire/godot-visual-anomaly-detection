@@ -14,7 +14,6 @@ def train():
         name="chibfire_com_style",
         root="datasets/a-poses",
         normal_dir="normal",
-        abnormal_dir="abnormal",
         train_batch_size=64,
         eval_batch_size=64,
         num_workers=1,
