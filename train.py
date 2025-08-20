@@ -1,11 +1,11 @@
 from anomalib.engine import Engine
 from anomalib.models import Dinomaly
 from anomalib.data import Folder
-from anomalib.data.utils import TestSplitMode
+from anomalib.data.utils import TestSplitMode, ValSplitMode
 import torch
 from multiprocessing import freeze_support
-
 from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint
+
 
 def train():
     torch.set_float32_matmul_precision("medium")
@@ -16,7 +16,11 @@ def train():
         normal_dir="normal",
         abnormal_dir="abnormal",
         train_batch_size=1,
+        eval_batch_size=1,
         num_workers=1,
+        test_split_mode=TestSplitMode.SYNTHETIC,  # Change this to create a validation set
+        val_split_mode=ValSplitMode.SAME_AS_TEST,  # Add this to use the same split as the test set
+        # You can also use ValSplitMode.SYNTHETIC and a ratio, e.g., val_split_ratio=0.1
     )
     datamodule.setup()
     model = Dinomaly()
