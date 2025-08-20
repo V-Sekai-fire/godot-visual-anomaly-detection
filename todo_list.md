@@ -1,8 +1,0 @@
-- [x] Analyze the terminal output to identify the root cause of the failure.
-- [x] Investigate the `train.py` script for potential issues in the code.
-- [x] Check the compatibility of the `Dinomaly` model with the dataset and engine.
-- [x] Verify the dataset structure and ensure it meets the requirements of the `Folder` datamodule.
-- [x] Investigate the NCCL error and CUDA memory issue mentioned in the terminal output.
-- [x] Test the script with a smaller dataset or reduced batch size to check for memory constraints.
-- [x] Review the `requirements.txt` file for potential dependency issues.
-- [x] Implement fixes and re-run the script to verify the resolution.
